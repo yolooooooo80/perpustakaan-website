@@ -1,0 +1,84 @@
+/* Ngawi ProMax Unified Design System */
+
+:root {
+    --primary-ngawi: #4a148c;       /* Deep Purple */
+    --secondary-ngawi: #7b1fa2;     /* Lighter Purple */
+    --accent-ngawi: #ffd600;        /* Gold */
+    --dark-ngawi: #1a0631;          /* Dark Purple Black */
+    --light-ngawi: #f3e5f5;         /* Very Light Purple */
+    --glass-white: rgba(255, 255, 255, 0.9);
+    --glass-dark: rgba(26, 6, 49, 0.85);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--light-ngawi);
+    color: #333;
+}
+
+/* Global Typography */
+.fw-black { font-weight: 900; }
+.text-primary-ngawi { color: var(--primary-ngawi) !important; }
+.text-accent-ngawi { color: var(--accent-ngawi) !important; }
+
+/* Unified Glassmorphism */
+.glass-card {
+    background: var(--glass-white);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(74, 20, 140, 0.1);
+    border-radius: 25px;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(74, 20, 140, 0.15);
+}
+
+/* Unified Buttons */
+.btn-primary {
+    background: var(--primary-ngawi) !important;
+    border: none !important;
+    color: white !important;
+    border-radius: 50px !important;
+    font-weight: 700 !important;
+    padding: 10px 25px !important;
+    transition: 0.3s !important;
+}
+
+.btn-primary:hover {
+    background: var(--secondary-ngawi) !important;
+    transform: scale(1.05);
+}
+
+.btn-warning {
+    background: var(--accent-ngawi) !important;
+    color: var(--primary-ngawi) !important;
+    border: none !important;
+    border-radius: 50px !important;
+    font-weight: 900 !important;
+    box-shadow: 0 4px 15px rgba(255, 214, 0, 0.3);
+}
+
+/* Unified Navbar */
+.navbar-ngawi {
+    background: var(--primary-ngawi) !important;
+    border-bottom: 4px solid var(--accent-ngawi);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 600;
+}
+
+.nav-link.active, .nav-link:hover {
+    color: var(--accent-ngawi) !important;
+}
+
+/* Stats Cards */
+.card-stats {
+    background: linear-gradient(135deg, var(--primary-ngawi), var(--secondary-ngawi));
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
