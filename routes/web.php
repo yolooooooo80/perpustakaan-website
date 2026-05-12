@@ -12,7 +12,8 @@ use App\Http\Controllers\ApiController;
 
 // Landing Page
 Route::get('/', function () {
-    return view('welcome');
+    $latestBooks = \App\Models\Book::with(['author', 'category'])->latest()->take(4)->get();
+    return view('welcome', compact('latestBooks'));
 });
 
 // Auth Routes (Breeze)
